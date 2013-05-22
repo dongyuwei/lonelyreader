@@ -1,0 +1,1119 @@
+[
+   {
+      "title": "关于 DSN/ESC",
+      "description": "<p>SMTP 协议除了 2XX,4XX,5XX 这些 status codes，后来又发展出一套 Enhanced Status Codes，最基本的在<a href=\"http://tools.ietf.org/html/rfc3463\">http://tools.ietf.org/html/rfc3463</a>，后来又有 RFC 3886, 4468, 4865, 4954, 5248 不断补充。</p>\n<p>除了仔细阅读 RFC 学习之外，微软 Exchange 有份文档描述了若干 ESC 的情况：<a href=\"http://technet.microsoft.com/zh-cn/library/bb232118%28v=exchg.150%29.aspx\">http://technet.microsoft.com/zh-cn/library/bb232118%28v=exchg.150%29.aspx</a></p>\n<p>也有人针对 Postfix 日志写了一个 DSN 翻译脚本：<a href=\"http://melinko2003.blogspot.com/2009/10/centos-postfix-dns-status-script.html\">http://melinko2003.blogspot.com/2009/10/centos-postfix-dns-status-script.html</a></p>",
+      "summary": "<p>SMTP 协议除了 2XX,4XX,5XX 这些 status codes，后来又发展出一套 Enhanced Status Codes，最基本的在<a href=\"http://tools.ietf.org/html/rfc3463\">http://tools.ietf.org/html/rfc3463</a>，后来又有 RFC 3886, 4468, 4865, 4954, 5248 不断补充。</p>\n<p>除了仔细阅读 RFC 学习之外，微软 Exchange 有份文档描述了若干 ESC 的情况：<a href=\"http://technet.microsoft.com/zh-cn/library/bb232118%28v=exchg.150%29.aspx\">http://technet.microsoft.com/zh-cn/library/bb232118%28v=exchg.150%29.aspx</a></p>\n<p>也有人针对 Postfix 日志写了一个 DSN 翻译脚本：<a href=\"http://melinko2003.blogspot.com/2009/10/centos-postfix-dns-status-script.html\">http://melinko2003.blogspot.com/2009/10/centos-postfix-dns-status-script.html</a></p>",
+      "date": "2013-04-09T18:07:30.000Z",
+      "pubdate": "2013-04-09T18:07:30.000Z",
+      "pubDate": "2013-04-09T18:07:30.000Z",
+      "link": "http://www.dup2.org/node/1516",
+      "guid": "1516 at http://www.dup2.org",
+      "author": "qyb",
+      "comments": "http://www.dup2.org/node/1516#comments",
+      "origlink": null,
+      "image": {},
+      "source": {},
+      "categories": [
+         "电子邮件"
+      ],
+      "enclosures": [],
+      "rss:@": {},
+      "rss:title": {
+         "@": {},
+         "#": "关于 DSN/ESC"
+      },
+      "rss:link": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1516"
+      },
+      "rss:description": {
+         "@": {},
+         "#": "<p>SMTP 协议除了 2XX,4XX,5XX 这些 status codes，后来又发展出一套 Enhanced Status Codes，最基本的在<a href=\"http://tools.ietf.org/html/rfc3463\">http://tools.ietf.org/html/rfc3463</a>，后来又有 RFC 3886, 4468, 4865, 4954, 5248 不断补充。</p>\n<p>除了仔细阅读 RFC 学习之外，微软 Exchange 有份文档描述了若干 ESC 的情况：<a href=\"http://technet.microsoft.com/zh-cn/library/bb232118%28v=exchg.150%29.aspx\">http://technet.microsoft.com/zh-cn/library/bb232118%28v=exchg.150%29.aspx</a></p>\n<p>也有人针对 Postfix 日志写了一个 DSN 翻译脚本：<a href=\"http://melinko2003.blogspot.com/2009/10/centos-postfix-dns-status-script.html\">http://melinko2003.blogspot.com/2009/10/centos-postfix-dns-status-script.html</a></p>"
+      },
+      "rss:comments": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1516#comments"
+      },
+      "rss:category": {
+         "@": {
+            "domain": "http://www.dup2.org/taxonomy/term/53"
+         },
+         "#": "电子邮件"
+      },
+      "rss:pubdate": {
+         "@": {},
+         "#": "Tue, 09 Apr 2013 18:07:30 +0000"
+      },
+      "dc:creator": {
+         "@": {},
+         "#": "qyb"
+      },
+      "rss:guid": {
+         "@": {
+            "ispermalink": "false"
+         },
+         "#": "1516 at http://www.dup2.org"
+      },
+      "meta": {
+         "#ns": [
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "@": [
+            {
+               "xml:base": "http://www.dup2.org"
+            },
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "#xml": {
+            "version": "1.0",
+            "encoding": "utf-8"
+         },
+         "#type": "rss",
+         "#version": "2.0",
+         "title": "BT的花 blogs",
+         "description": null,
+         "date": null,
+         "pubdate": null,
+         "pubDate": null,
+         "link": "http://www.dup2.org/blog",
+         "xmlurl": null,
+         "xmlUrl": null,
+         "author": null,
+         "language": "zh-hans",
+         "favicon": null,
+         "copyright": null,
+         "generator": null,
+         "cloud": {},
+         "image": {},
+         "categories": [],
+         "rss:@": {},
+         "rss:title": {
+            "@": {},
+            "#": "BT的花 blogs"
+         },
+         "rss:link": {
+            "@": {},
+            "#": "http://www.dup2.org/blog"
+         },
+         "rss:description": {
+            "@": {}
+         },
+         "rss:language": {
+            "@": {},
+            "#": "zh-hans"
+         }
+      }
+   },
+   {
+      "title": "粤语里的卷舌",
+      "description": "<p>总觉得自己粤语歌唱的越来越差，很多音自己唱出来都觉得发得不准确</p>\n<p>自我分析是因为长期说普通话，为了把卷舌不卷舌分得清楚，不卷舌的音就会把舌头打得特别平</p>\n<p>这就导致粤语里的有些音我发不出来了！！虽然北方人会觉得南方人说话不卷舌，但其实粤语里面发音细细分辨还是很丰富的，有些音可能舌头卷得不多，但是要在口腔里打转</p>\n<p>总之粤语歌需要重新练练了</p>",
+      "summary": "<p>总觉得自己粤语歌唱的越来越差，很多音自己唱出来都觉得发得不准确</p>\n<p>自我分析是因为长期说普通话，为了把卷舌不卷舌分得清楚，不卷舌的音就会把舌头打得特别平</p>\n<p>这就导致粤语里的有些音我发不出来了！！虽然北方人会觉得南方人说话不卷舌，但其实粤语里面发音细细分辨还是很丰富的，有些音可能舌头卷得不多，但是要在口腔里打转</p>\n<p>总之粤语歌需要重新练练了</p>",
+      "date": "2013-04-09T06:20:25.000Z",
+      "pubdate": "2013-04-09T06:20:25.000Z",
+      "pubDate": "2013-04-09T06:20:25.000Z",
+      "link": "http://www.dup2.org/node/1515",
+      "guid": "1515 at http://www.dup2.org",
+      "author": "qyb",
+      "comments": "http://www.dup2.org/node/1515#comments",
+      "origlink": null,
+      "image": {},
+      "source": {},
+      "categories": [
+         "文化",
+         "音乐"
+      ],
+      "enclosures": [],
+      "rss:@": {},
+      "rss:title": {
+         "@": {},
+         "#": "粤语里的卷舌"
+      },
+      "rss:link": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1515"
+      },
+      "rss:description": {
+         "@": {},
+         "#": "<p>总觉得自己粤语歌唱的越来越差，很多音自己唱出来都觉得发得不准确</p>\n<p>自我分析是因为长期说普通话，为了把卷舌不卷舌分得清楚，不卷舌的音就会把舌头打得特别平</p>\n<p>这就导致粤语里的有些音我发不出来了！！虽然北方人会觉得南方人说话不卷舌，但其实粤语里面发音细细分辨还是很丰富的，有些音可能舌头卷得不多，但是要在口腔里打转</p>\n<p>总之粤语歌需要重新练练了</p>"
+      },
+      "rss:comments": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1515#comments"
+      },
+      "rss:category": [
+         {
+            "@": {
+               "domain": "http://www.dup2.org/taxonomy/term/6"
+            },
+            "#": "文化"
+         },
+         {
+            "@": {
+               "domain": "http://www.dup2.org/taxonomy/term/5"
+            },
+            "#": "音乐"
+         }
+      ],
+      "rss:pubdate": {
+         "@": {},
+         "#": "Tue, 09 Apr 2013 06:20:25 +0000"
+      },
+      "dc:creator": {
+         "@": {},
+         "#": "qyb"
+      },
+      "rss:guid": {
+         "@": {
+            "ispermalink": "false"
+         },
+         "#": "1515 at http://www.dup2.org"
+      },
+      "meta": {
+         "#ns": [
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "@": [
+            {
+               "xml:base": "http://www.dup2.org"
+            },
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "#xml": {
+            "version": "1.0",
+            "encoding": "utf-8"
+         },
+         "#type": "rss",
+         "#version": "2.0",
+         "title": "BT的花 blogs",
+         "description": null,
+         "date": null,
+         "pubdate": null,
+         "pubDate": null,
+         "link": "http://www.dup2.org/blog",
+         "xmlurl": null,
+         "xmlUrl": null,
+         "author": null,
+         "language": "zh-hans",
+         "favicon": null,
+         "copyright": null,
+         "generator": null,
+         "cloud": {},
+         "image": {},
+         "categories": [],
+         "rss:@": {},
+         "rss:title": {
+            "@": {},
+            "#": "BT的花 blogs"
+         },
+         "rss:link": {
+            "@": {},
+            "#": "http://www.dup2.org/blog"
+         },
+         "rss:description": {
+            "@": {}
+         },
+         "rss:language": {
+            "@": {},
+            "#": "zh-hans"
+         }
+      }
+   },
+   {
+      "title": "邱可心最近二三事",
+      "description": "<p>这丫头身高1.53m了，稳步而坚定的向她小姑姑——我们家庭第一女性身高——发起超越</p>\n<p>最近一个月爬了一次香山、一次凤凰岭，她一路都没有叫苦叫累，虽然心里可能还是不爽，路上也老是嚷嚷着要买饮料冰激凌，但至少不再抱怨爬山这件事，比以前有了很大的提高。<br />\n计划什么时候开始带她跑步</p>\n<p>今年暖气停了以后，屋里冷，晚上又不开空调，于是她就挤在大床上睡。结果有一天晚上她居然把被子踢了后，钻到我被子里；然后我把她重新盖好，早上醒来时发现她还是在我被子里。。。。。。真是温馨啊，但是这样的事情以后很可能不再会发生了。sigh</p>\n<p>昨晚回到家里，她给我秀她收到的柯南卡片。我问：是哪个小男生送的呀？她说不知道，课间休息出去玩回到了教室就看到桌上有这张卡片<br />\n-- 也不知道这事是真是假<br />\n-- 如果是真的，她居然没有和她老妈汇报���而是和老爹说（我回家很晚，她有大把时间交流这个）。。是什么潜意识在吗？</p>",
+      "summary": "<p>这丫头身高1.53m了，稳步而坚定的向她小姑姑——我们家庭第一女性身高——发起超越</p>\n<p>最近一个月爬了一次香山、一次凤凰岭，她一路都没有叫苦叫累，虽然心里可能还是不爽，路上也老是嚷嚷着要买饮料冰激凌，但至少不再抱怨爬山这件事，比以前有了很大的提高。<br />\n计划什么时候开始带她跑步</p>\n<p>今年暖气停了以后，屋里冷，晚上又不开空调，于是她就挤在大床上睡。结果有一天晚上她居然把被子踢了后，钻到我被子里；然后我把她重新盖好，早上醒来时发现她还是在我被子里。。。。。。真是温馨啊，但是这样的事情以后很可能不再会发生了。sigh</p>\n<p>昨晚回到家里，她给我秀她收到的柯南卡片。我问：是哪个小男生送的呀？她说不知道，课间休息出去玩回到了教室就看到桌上有这张卡片<br />\n-- 也不知道这事是真是假<br />\n-- 如果是真的，她居然没有和她老妈汇报���而是和老爹说（我回家很晚，她有大把时间交流这个）。。是什么潜意识在吗？</p>",
+      "date": "2013-04-09T06:15:06.000Z",
+      "pubdate": "2013-04-09T06:15:06.000Z",
+      "pubDate": "2013-04-09T06:15:06.000Z",
+      "link": "http://www.dup2.org/node/1514",
+      "guid": "1514 at http://www.dup2.org",
+      "author": "qyb",
+      "comments": "http://www.dup2.org/node/1514#comments",
+      "origlink": null,
+      "image": {},
+      "source": {},
+      "categories": [
+         "dada"
+      ],
+      "enclosures": [],
+      "rss:@": {},
+      "rss:title": {
+         "@": {},
+         "#": "邱可心最近二三事"
+      },
+      "rss:link": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1514"
+      },
+      "rss:description": {
+         "@": {},
+         "#": "<p>这丫头身高1.53m了，稳步而坚定的向她小姑姑——我们家庭第一女性身高——发起超越</p>\n<p>最近一个月爬了一次香山、一次凤凰岭，她一路都没有叫苦叫累，虽然心里可能还是不爽，路上也老是嚷嚷着要买饮料冰激凌，但至少不再抱怨爬山这件事，比以前有了很大的提高。<br />\n计划什么时候开始带她跑步</p>\n<p>今年暖气停了以后，屋里冷，晚上又不开空调，于是她就挤在大床上睡。结果有一天晚上她居然把被子踢了后，钻到我被子里；然后我把她重新盖好，早上醒来时发现她还是在我被子里。。。。。。真是温馨啊，但是这样的事情以后很可能不再会发生了。sigh</p>\n<p>昨晚回到家里，她给我秀她收到的柯南卡片。我问：是哪个小男生送的呀？她说不知道，课间休息出去玩回到了教室就看到桌上有这张卡片<br />\n-- 也不知道这事是真是假<br />\n-- 如果是真的，她居然没有和她老妈汇报���而是和老爹说（我回家很晚，她有大把时间交流这个）。。是什么潜意识在吗？</p>"
+      },
+      "rss:comments": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1514#comments"
+      },
+      "rss:category": {
+         "@": {
+            "domain": "http://www.dup2.org/taxonomy/term/4"
+         },
+         "#": "dada"
+      },
+      "rss:pubdate": {
+         "@": {},
+         "#": "Tue, 09 Apr 2013 06:15:06 +0000"
+      },
+      "dc:creator": {
+         "@": {},
+         "#": "qyb"
+      },
+      "rss:guid": {
+         "@": {
+            "ispermalink": "false"
+         },
+         "#": "1514 at http://www.dup2.org"
+      },
+      "meta": {
+         "#ns": [
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "@": [
+            {
+               "xml:base": "http://www.dup2.org"
+            },
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "#xml": {
+            "version": "1.0",
+            "encoding": "utf-8"
+         },
+         "#type": "rss",
+         "#version": "2.0",
+         "title": "BT的花 blogs",
+         "description": null,
+         "date": null,
+         "pubdate": null,
+         "pubDate": null,
+         "link": "http://www.dup2.org/blog",
+         "xmlurl": null,
+         "xmlUrl": null,
+         "author": null,
+         "language": "zh-hans",
+         "favicon": null,
+         "copyright": null,
+         "generator": null,
+         "cloud": {},
+         "image": {},
+         "categories": [],
+         "rss:@": {},
+         "rss:title": {
+            "@": {},
+            "#": "BT的花 blogs"
+         },
+         "rss:link": {
+            "@": {},
+            "#": "http://www.dup2.org/blog"
+         },
+         "rss:description": {
+            "@": {}
+         },
+         "rss:language": {
+            "@": {},
+            "#": "zh-hans"
+         }
+      }
+   },
+   {
+      "title": "记录推推 22 个月的一段对话",
+      "description": "<p>【晚上 LP 抱着推推在阳台玻璃前往外面看灯、车什么的，我在旁边凑过来凑过去】<br />\n              我【伸手】：推推，爸爸抱一下？<br />\n  推推【用手拨开我的手】：不要不要<br />\n          我【继续伸手】：推推，爸爸抱一下？妈妈累了！<br />\n【推推紧紧地趴在 LP 身上】<br />\n      LP【可怜地看着我】：推推，爸爸站得高，看得远，让爸爸抱抱好不好？<br />\n【推推直起身，看看我，然后向我伸出了手】<br />\n【我抱了一会儿，从阳台换到客厅继续晃悠，LP 在旁边凑过来凑过去】<br />\n              LP【伸手】：推推，妈妈抱一下？<br />\n推推【紧紧地趴在我身上】：妈妈累了……</p>",
+      "summary": "<p>【晚上 LP 抱着推推在阳台玻璃前往外面看灯、车什么的，我在旁边凑过来凑过去】<br />\n              我【伸手】：推推，爸爸抱一下？<br />\n  推推【用手拨开我的手】：不要不要<br />\n          我【继续伸手】：推推，爸爸抱一下？妈妈累了！<br />\n【推推紧紧地趴在 LP 身上】<br />\n      LP【可怜地看着我】：推推，爸爸站得高，看得远，让爸爸抱抱好不好？<br />\n【推推直起身，看看我，然后向我伸出了手】<br />\n【我抱了一会儿，从阳台换到客厅继续晃悠，LP 在旁边凑过来凑过去】<br />\n              LP【伸手】：推推，妈妈抱一下？<br />\n推推【紧紧地趴在我身上】：妈妈累了……</p>",
+      "date": "2013-03-28T15:34:27.000Z",
+      "pubdate": "2013-03-28T15:34:27.000Z",
+      "pubDate": "2013-03-28T15:34:27.000Z",
+      "link": "http://www.dup2.org/node/1513",
+      "guid": "1513 at http://www.dup2.org",
+      "author": "qyt",
+      "comments": "http://www.dup2.org/node/1513#comments",
+      "origlink": null,
+      "image": {},
+      "source": {},
+      "categories": [
+         "tuitui"
+      ],
+      "enclosures": [],
+      "rss:@": {},
+      "rss:title": {
+         "@": {},
+         "#": "记录推推 22 个月的一段对话"
+      },
+      "rss:link": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1513"
+      },
+      "rss:description": {
+         "@": {},
+         "#": "<p>【晚上 LP 抱着推推在阳台玻璃前往外面看灯、车什么的，我在旁边凑过来凑过去】<br />\n              我【伸手】：推推，爸爸抱一下？<br />\n  推推【用手拨开我的手】：不要不要<br />\n          我【继续伸手】：推推，爸爸抱一下？妈妈累了！<br />\n【推推紧紧地趴在 LP 身上】<br />\n      LP【可怜地看着我】：推推，爸爸站得高，看得远，让爸爸抱抱好不好？<br />\n【推推直起身，看看我，然后向我伸出了手】<br />\n【我抱了一会儿，从阳台换到客厅继续晃悠，LP 在旁边凑过来凑过去】<br />\n              LP【伸手】：推推，妈妈抱一下？<br />\n推推【紧紧地趴在我身上】：妈妈累了……</p>"
+      },
+      "rss:comments": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1513#comments"
+      },
+      "rss:category": {
+         "@": {
+            "domain": "http://www.dup2.org/taxonomy/term/51"
+         },
+         "#": "tuitui"
+      },
+      "rss:pubdate": {
+         "@": {},
+         "#": "Thu, 28 Mar 2013 15:34:27 +0000"
+      },
+      "dc:creator": {
+         "@": {},
+         "#": "qyt"
+      },
+      "rss:guid": {
+         "@": {
+            "ispermalink": "false"
+         },
+         "#": "1513 at http://www.dup2.org"
+      },
+      "meta": {
+         "#ns": [
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "@": [
+            {
+               "xml:base": "http://www.dup2.org"
+            },
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "#xml": {
+            "version": "1.0",
+            "encoding": "utf-8"
+         },
+         "#type": "rss",
+         "#version": "2.0",
+         "title": "BT的花 blogs",
+         "description": null,
+         "date": null,
+         "pubdate": null,
+         "pubDate": null,
+         "link": "http://www.dup2.org/blog",
+         "xmlurl": null,
+         "xmlUrl": null,
+         "author": null,
+         "language": "zh-hans",
+         "favicon": null,
+         "copyright": null,
+         "generator": null,
+         "cloud": {},
+         "image": {},
+         "categories": [],
+         "rss:@": {},
+         "rss:title": {
+            "@": {},
+            "#": "BT的花 blogs"
+         },
+         "rss:link": {
+            "@": {},
+            "#": "http://www.dup2.org/blog"
+         },
+         "rss:description": {
+            "@": {}
+         },
+         "rss:language": {
+            "@": {},
+            "#": "zh-hans"
+         }
+      }
+   },
+   {
+      "title": "(13)Permission denied 或者 403 Forbidden",
+      "description": "<p>这两天接了个任务，调研 code review 工具。</p>\n<p>前两天在 centos 上折腾 Review Board，rb-site 完成后，启动 httpd，error log 里报 [error] avahi_entry_group_add_service_strlst(\"localhost\") failed: Invalid host name，这问题怎么着也没解决。最后换了 ubuntu，顺利异常，所有包都有二进制的，不像在 centos 里还编译了两个包。啥问题没遇到，就进入设置页面了。</p>\n<p>今天继续在 centos 上试另一个 phabricator，安装很容易。访问页面报 403 You don't have permission to access / on this server，又搞了良久，chmod 了，chown 了，Allow from all 了，全都没有作用。关键字又按照 error log 里的错误(13)Permission denied: access to / denied 来搜，搜到一个 <a href=\"http://www.petefreitag.com/item/793.cfm\">Fixing Apache (13)Permission denied: access to / 403 Forbidden</a>，按照这个里面一步一步又过了一遍，除了倒数第二步 Make sure that the Directory Above has Execute Permission 没仔细看，倒数第一步也研究了一下，根据<a href=\"http://hi.baidu.com/myloveredhat/item/8c1f56ecc1453dc0baf37d4b\">究竟什么是SElinux?</a>发现这台 centos 应该不是 SELinux。回过头来仔细读了一下倒数第二步，这里面说 chmod 不能只改 /path/to/webroot/，应该连整个 /path 都改了才行。怀着死马当活马医的心情执行了一下。哈哈哈哈————</p>",
+      "summary": "<p>这两天接了个任务，调研 code review 工具。</p>\n<p>前两天在 centos 上折腾 Review Board，rb-site 完成后，启动 httpd，error log 里报 [error] avahi_entry_group_add_service_strlst(\"localhost\") failed: Invalid host name，这问题怎么着也没解决。最后换了 ubuntu，顺利异常，所有包都有二进制的，不像在 centos 里还编译了两个包。啥问题没遇到，就进入设置页面了。</p>\n<p>今天继续在 centos 上试另一个 phabricator，安装很容易。访问页面报 403 You don't have permission to access / on this server，又搞了良久，chmod 了，chown 了，Allow from all 了，全都没有作用。关键字又按照 error log 里的错误(13)Permission denied: access to / denied 来搜，搜到一个 <a href=\"http://www.petefreitag.com/item/793.cfm\">Fixing Apache (13)Permission denied: access to / 403 Forbidden</a>，按照这个里面一步一步又过了一遍，除了倒数第二步 Make sure that the Directory Above has Execute Permission 没仔细看，倒数第一步也研究了一下，根据<a href=\"http://hi.baidu.com/myloveredhat/item/8c1f56ecc1453dc0baf37d4b\">究竟什么是SElinux?</a>发现这台 centos 应该不是 SELinux。回过头来仔细读了一下倒数第二步，这里面说 chmod 不能只改 /path/to/webroot/，应该连整个 /path 都改了才行。怀着死马当活马医的心情执行了一下。哈哈哈哈————</p>",
+      "date": "2013-03-20T09:06:21.000Z",
+      "pubdate": "2013-03-20T09:06:21.000Z",
+      "pubDate": "2013-03-20T09:06:21.000Z",
+      "link": "http://www.dup2.org/node/1512",
+      "guid": "1512 at http://www.dup2.org",
+      "author": "qyt",
+      "comments": "http://www.dup2.org/node/1512#comments",
+      "origlink": null,
+      "image": {},
+      "source": {},
+      "categories": [
+         "技术",
+         "网络"
+      ],
+      "enclosures": [],
+      "rss:@": {},
+      "rss:title": {
+         "@": {},
+         "#": "(13)Permission denied 或者 403 Forbidden"
+      },
+      "rss:link": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1512"
+      },
+      "rss:description": {
+         "@": {},
+         "#": "<p>这两天接了个任务，调研 code review 工具。</p>\n<p>前两天在 centos 上折腾 Review Board，rb-site 完成后，启动 httpd，error log 里报 [error] avahi_entry_group_add_service_strlst(\"localhost\") failed: Invalid host name，这问题怎么着也没解决。最后换了 ubuntu，顺利异常，所有包都有二进制的，不像在 centos 里还编译了两个包。啥问题没遇到，就进入设置页面了。</p>\n<p>今天继续在 centos 上试另一个 phabricator，安装很容易。访问页面报 403 You don't have permission to access / on this server，又搞了良久，chmod 了，chown 了，Allow from all 了，全都没有作用。关键字又按照 error log 里的错误(13)Permission denied: access to / denied 来搜，搜到一个 <a href=\"http://www.petefreitag.com/item/793.cfm\">Fixing Apache (13)Permission denied: access to / 403 Forbidden</a>，按照这个里面一步一步又过了一遍，除了倒数第二步 Make sure that the Directory Above has Execute Permission 没仔细看，倒数第一步也研究了一下，根据<a href=\"http://hi.baidu.com/myloveredhat/item/8c1f56ecc1453dc0baf37d4b\">究竟什么是SElinux?</a>发现这台 centos 应该不是 SELinux。回过头来仔细读了一下倒数第二步，这里面说 chmod 不能只改 /path/to/webroot/，应该连整个 /path 都改了才行。怀着死马当活马医的心情执行了一下。哈哈哈哈————</p>"
+      },
+      "rss:comments": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1512#comments"
+      },
+      "rss:category": [
+         {
+            "@": {
+               "domain": "http://www.dup2.org/taxonomy/term/1"
+            },
+            "#": "技术"
+         },
+         {
+            "@": {
+               "domain": "http://www.dup2.org/taxonomy/term/10"
+            },
+            "#": "网络"
+         }
+      ],
+      "rss:pubdate": {
+         "@": {},
+         "#": "Wed, 20 Mar 2013 09:06:21 +0000"
+      },
+      "dc:creator": {
+         "@": {},
+         "#": "qyt"
+      },
+      "rss:guid": {
+         "@": {
+            "ispermalink": "false"
+         },
+         "#": "1512 at http://www.dup2.org"
+      },
+      "meta": {
+         "#ns": [
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "@": [
+            {
+               "xml:base": "http://www.dup2.org"
+            },
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "#xml": {
+            "version": "1.0",
+            "encoding": "utf-8"
+         },
+         "#type": "rss",
+         "#version": "2.0",
+         "title": "BT的花 blogs",
+         "description": null,
+         "date": null,
+         "pubdate": null,
+         "pubDate": null,
+         "link": "http://www.dup2.org/blog",
+         "xmlurl": null,
+         "xmlUrl": null,
+         "author": null,
+         "language": "zh-hans",
+         "favicon": null,
+         "copyright": null,
+         "generator": null,
+         "cloud": {},
+         "image": {},
+         "categories": [],
+         "rss:@": {},
+         "rss:title": {
+            "@": {},
+            "#": "BT的花 blogs"
+         },
+         "rss:link": {
+            "@": {},
+            "#": "http://www.dup2.org/blog"
+         },
+         "rss:description": {
+            "@": {}
+         },
+         "rss:language": {
+            "@": {},
+            "#": "zh-hans"
+         }
+      }
+   },
+   {
+      "title": "武汉日记（十）",
+      "description": "<p>“<a href=\"http://techcrunch.com/2013/02/06/angellists-naval-ravikant-says-the-future-of-vc-is-smaller-funding-rounds-more-enterprise-and-hardware/\">http://t.cn/zYczuAR</a> AngelList某合伙人认为早期创投的趋势是每轮融资额会变少（精细创业？）传统种子$750k，A轮3-5M——将来种子$250-500k，A轮可能只有1M。大VC会减少早期创投的关注，小微型VC在该领域不断增长。创业公司会越来越多”</p>\n<p>以“投资经理”的身份回顾这三个项目，SendCloud和企业网盘大概各花了$250-$350k的钱，下一步就应该是寻求A轮融资，支撑商业发展了。随身看这个项目当前的状态相当于团队接了一个外包项目，暂且养活自己，慢慢寻找新的机会</p>\n<p>Update: 要是给团队70%-80%股权的话，Seed fund 投资额说不定可以再减少30%-50%</p>",
+      "summary": "<p>“<a href=\"http://techcrunch.com/2013/02/06/angellists-naval-ravikant-says-the-future-of-vc-is-smaller-funding-rounds-more-enterprise-and-hardware/\">http://t.cn/zYczuAR</a> AngelList某合伙人认为早期创投的趋势是每轮融资额会变少（精细创业？）传统种子$750k，A轮3-5M——将来种子$250-500k，A轮可能只有1M。大VC会减少早期创投的关注，小微型VC在该领域不断增长。创业公司会越来越多”</p>\n<p>以“投资经理”的身份回顾这三个项目，SendCloud和企业网盘大概各花了$250-$350k的钱，下一步就应该是寻求A轮融资，支撑商业发展了。随身看这个项目当前的状态相当于团队接了一个外包项目，暂且养活自己，慢慢寻找新的机会</p>\n<p>Update: 要是给团队70%-80%股权的话，Seed fund 投资额说不定可以再减少30%-50%</p>",
+      "date": "2013-02-07T02:58:21.000Z",
+      "pubdate": "2013-02-07T02:58:21.000Z",
+      "pubDate": "2013-02-07T02:58:21.000Z",
+      "link": "http://www.dup2.org/node/1511",
+      "guid": "1511 at http://www.dup2.org",
+      "author": "qyb",
+      "comments": "http://www.dup2.org/node/1511#comments",
+      "origlink": null,
+      "image": {},
+      "source": {},
+      "categories": [
+         "商业"
+      ],
+      "enclosures": [],
+      "rss:@": {},
+      "rss:title": {
+         "@": {},
+         "#": "武汉日记（十）"
+      },
+      "rss:link": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1511"
+      },
+      "rss:description": {
+         "@": {},
+         "#": "<p>“<a href=\"http://techcrunch.com/2013/02/06/angellists-naval-ravikant-says-the-future-of-vc-is-smaller-funding-rounds-more-enterprise-and-hardware/\">http://t.cn/zYczuAR</a> AngelList某合伙人认为早期创投的趋势是每轮融资额会变少（精细创业？）传统种子$750k，A轮3-5M——将来种子$250-500k，A轮可能只有1M。大VC会减少早期创投的关注，小微型VC在该领域不断增长。创业公司会越来越多”</p>\n<p>以“投资经理”的身份回顾这三个项目，SendCloud和企业网盘大概各花了$250-$350k的钱，下一步就应该是寻求A轮融资，支撑商业发展了。随身看这个项目当前的状态相当于团队接了一个外包项目，暂且养活自己，慢慢寻找新的机会</p>\n<p>Update: 要是给团队70%-80%股权的话，Seed fund 投资额说不定可以再减少30%-50%</p>"
+      },
+      "rss:comments": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1511#comments"
+      },
+      "rss:category": {
+         "@": {
+            "domain": "http://www.dup2.org/taxonomy/term/3"
+         },
+         "#": "商业"
+      },
+      "rss:pubdate": {
+         "@": {},
+         "#": "Thu, 07 Feb 2013 02:58:21 +0000"
+      },
+      "dc:creator": {
+         "@": {},
+         "#": "qyb"
+      },
+      "rss:guid": {
+         "@": {
+            "ispermalink": "false"
+         },
+         "#": "1511 at http://www.dup2.org"
+      },
+      "meta": {
+         "#ns": [
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "@": [
+            {
+               "xml:base": "http://www.dup2.org"
+            },
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "#xml": {
+            "version": "1.0",
+            "encoding": "utf-8"
+         },
+         "#type": "rss",
+         "#version": "2.0",
+         "title": "BT的花 blogs",
+         "description": null,
+         "date": null,
+         "pubdate": null,
+         "pubDate": null,
+         "link": "http://www.dup2.org/blog",
+         "xmlurl": null,
+         "xmlUrl": null,
+         "author": null,
+         "language": "zh-hans",
+         "favicon": null,
+         "copyright": null,
+         "generator": null,
+         "cloud": {},
+         "image": {},
+         "categories": [],
+         "rss:@": {},
+         "rss:title": {
+            "@": {},
+            "#": "BT的花 blogs"
+         },
+         "rss:link": {
+            "@": {},
+            "#": "http://www.dup2.org/blog"
+         },
+         "rss:description": {
+            "@": {}
+         },
+         "rss:language": {
+            "@": {},
+            "#": "zh-hans"
+         }
+      }
+   },
+   {
+      "title": "MailChimp 2012",
+      "description": "<p><a href=\"http://mailchimp.com/2012/\">http://mailchimp.com/2012/</a></p>\n<p>期待 SendCloud 2013</p>",
+      "summary": "<p><a href=\"http://mailchimp.com/2012/\">http://mailchimp.com/2012/</a></p>\n<p>期待 SendCloud 2013</p>",
+      "date": "2013-01-28T09:23:58.000Z",
+      "pubdate": "2013-01-28T09:23:58.000Z",
+      "pubDate": "2013-01-28T09:23:58.000Z",
+      "link": "http://www.dup2.org/node/1510",
+      "guid": "1510 at http://www.dup2.org",
+      "author": "qyb",
+      "comments": "http://www.dup2.org/node/1510#comments",
+      "origlink": null,
+      "image": {},
+      "source": {},
+      "categories": [
+         "电子邮件"
+      ],
+      "enclosures": [],
+      "rss:@": {},
+      "rss:title": {
+         "@": {},
+         "#": "MailChimp 2012"
+      },
+      "rss:link": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1510"
+      },
+      "rss:description": {
+         "@": {},
+         "#": "<p><a href=\"http://mailchimp.com/2012/\">http://mailchimp.com/2012/</a></p>\n<p>期待 SendCloud 2013</p>"
+      },
+      "rss:comments": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1510#comments"
+      },
+      "rss:category": {
+         "@": {
+            "domain": "http://www.dup2.org/taxonomy/term/53"
+         },
+         "#": "电子邮件"
+      },
+      "rss:pubdate": {
+         "@": {},
+         "#": "Mon, 28 Jan 2013 09:23:58 +0000"
+      },
+      "dc:creator": {
+         "@": {},
+         "#": "qyb"
+      },
+      "rss:guid": {
+         "@": {
+            "ispermalink": "false"
+         },
+         "#": "1510 at http://www.dup2.org"
+      },
+      "meta": {
+         "#ns": [
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "@": [
+            {
+               "xml:base": "http://www.dup2.org"
+            },
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "#xml": {
+            "version": "1.0",
+            "encoding": "utf-8"
+         },
+         "#type": "rss",
+         "#version": "2.0",
+         "title": "BT的花 blogs",
+         "description": null,
+         "date": null,
+         "pubdate": null,
+         "pubDate": null,
+         "link": "http://www.dup2.org/blog",
+         "xmlurl": null,
+         "xmlUrl": null,
+         "author": null,
+         "language": "zh-hans",
+         "favicon": null,
+         "copyright": null,
+         "generator": null,
+         "cloud": {},
+         "image": {},
+         "categories": [],
+         "rss:@": {},
+         "rss:title": {
+            "@": {},
+            "#": "BT的花 blogs"
+         },
+         "rss:link": {
+            "@": {},
+            "#": "http://www.dup2.org/blog"
+         },
+         "rss:description": {
+            "@": {}
+         },
+         "rss:language": {
+            "@": {},
+            "#": "zh-hans"
+         }
+      }
+   },
+   {
+      "title": "再建两只邮件相关的产品技术团队",
+      "description": "<p>武汉除了 SendCloud 之外，个人邮箱的团队也开始建设了。继上次立鹏同学之后，本晚我又进行了一次技术的讲解，内容包括：</p>\n<ul>\n<li> sohumc package，立马有同学指出用现在 kan.sohu.com 使用的是 python-virtualenv </li>\n<li> sohu 的 Maildir 内容，以及 deliver\n<ul>\n<li> tmp-&gt;new，隔离 deliver 逻辑 </li>\n<li> new-&gt;cur，隔离 mua 逻辑 </li>\n<li> 过滤器的一个小细节 </li>\n<li> SQL索引和搜索索引</li>\n</ul>\n</li>\n<li> MX 的几个要点\n<ul>\n<li> tcptable、milter 协议 </li>\n<li> 队列、磁盘性能 </li>\n<li> 尽可能早地发现 spammer，断开连接 </li>\n<li> postfix 并发能力限制，以及将来的资源隔离保护的设想 </li>\n<li> 包括向后台投递在内，任何一个环节故障，都会导致 MX 的不良反应 </li>\n</ul>\n</li>\n<li> tcptable ，以及企邮团队在2012年踩的坑 </li>\n<li> 在 postfix 外发层面做过的修改 </li>\n<li> <a href=\"http://www.ituring.com.cn/article/8111\">Berkeley DB</a>，以及我们封装的 SMDB </li>\n</ul>\n<p>说来也奇妙，本来这个团队刚刚开始招聘的时候——大概是2011年11月份左右——我就是计划着做邮件，���此从CPyUG找人；虽然中间有变化，但最终还是落在了这些同学身上，可见真是命运冥冥安排。<br />\n下一次来武汉计划会详细介绍 Milter 和 Antispam 相关的知识，再加上 SMTP、Nginx 吧</p>\n<p>北京计划从邮件周边着手，配合移动端再想想办法启动一组人马</p>\n<p>一手是围绕Email、云存储来深化运营；另一手是云计算平台和大数据的技术积累。就是这样了</p>",
+      "summary": "<p>武汉除了 SendCloud 之外，个人邮箱的团队也开始建设了。继上次立鹏同学之后，本晚我又进行了一次技术的讲解，内容包括：</p>\n<ul>\n<li> sohumc package，立马有同学指出用现在 kan.sohu.com 使用的是 python-virtualenv </li>\n<li> sohu 的 Maildir 内容，以及 deliver\n<ul>\n<li> tmp-&gt;new，隔离 deliver 逻辑 </li>\n<li> new-&gt;cur，隔离 mua 逻辑 </li>\n<li> 过滤器的一个小细节 </li>\n<li> SQL索引和搜索索引</li>\n</ul>\n</li>\n<li> MX 的几个要点\n<ul>\n<li> tcptable、milter 协议 </li>\n<li> 队列、磁盘性能 </li>\n<li> 尽可能早地发现 spammer，断开连接 </li>\n<li> postfix 并发能力限制，以及将来的资源隔离保护的设想 </li>\n<li> 包括向后台投递在内，任何一个环节故障，都会导致 MX 的不良反应 </li>\n</ul>\n</li>\n<li> tcptable ，以及企邮团队在2012年踩的坑 </li>\n<li> 在 postfix 外发层面做过的修改 </li>\n<li> <a href=\"http://www.ituring.com.cn/article/8111\">Berkeley DB</a>，以及我们封装的 SMDB </li>\n</ul>\n<p>说来也奇妙，本来这个团队刚刚开始招聘的时候——大概是2011年11月份左右——我就是计划着做邮件，���此从CPyUG找人；虽然中间有变化，但最终还是落在了这些同学身上，可见真是命运冥冥安排。<br />\n下一次来武汉计划会详细介绍 Milter 和 Antispam 相关的知识，再加上 SMTP、Nginx 吧</p>\n<p>北京计划从邮件周边着手，配合移动端再想想办法启动一组人马</p>\n<p>一手是围绕Email、云存储来深化运营；另一手是云计算平台和大数据的技术积累。就是这样了</p>",
+      "date": "2013-01-10T14:03:36.000Z",
+      "pubdate": "2013-01-10T14:03:36.000Z",
+      "pubDate": "2013-01-10T14:03:36.000Z",
+      "link": "http://www.dup2.org/node/1509",
+      "guid": "1509 at http://www.dup2.org",
+      "author": "qyb",
+      "comments": "http://www.dup2.org/node/1509#comments",
+      "origlink": null,
+      "image": {},
+      "source": {},
+      "categories": [
+         "电子邮件",
+         "生活"
+      ],
+      "enclosures": [],
+      "rss:@": {},
+      "rss:title": {
+         "@": {},
+         "#": "再建两只邮件相关的产品技术团队"
+      },
+      "rss:link": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1509"
+      },
+      "rss:description": {
+         "@": {},
+         "#": "<p>武汉除了 SendCloud 之外，个人邮箱的团队也开始建设了。继上次立鹏同学之后，本晚我又进行了一次技术的讲解，内容包括：</p>\n<ul>\n<li> sohumc package，立马有同学指出用现在 kan.sohu.com 使用的是 python-virtualenv </li>\n<li> sohu 的 Maildir 内容，以及 deliver\n<ul>\n<li> tmp-&gt;new，隔离 deliver 逻辑 </li>\n<li> new-&gt;cur，隔离 mua 逻辑 </li>\n<li> 过滤器的一个小细节 </li>\n<li> SQL索引和搜索索引</li>\n</ul>\n</li>\n<li> MX 的几个要点\n<ul>\n<li> tcptable、milter 协议 </li>\n<li> 队列、磁盘性能 </li>\n<li> 尽可能早地发现 spammer，断开连接 </li>\n<li> postfix 并发能力限制，以及将来的资源隔离保护的设想 </li>\n<li> 包括向后台投递在内，任何一个环节故障，都会导致 MX 的不良反应 </li>\n</ul>\n</li>\n<li> tcptable ，以及企邮团队在2012年踩的坑 </li>\n<li> 在 postfix 外发层面做过的修改 </li>\n<li> <a href=\"http://www.ituring.com.cn/article/8111\">Berkeley DB</a>，以及我们封装的 SMDB </li>\n</ul>\n<p>说来也奇妙，本来这个团队刚刚开始招聘的时候——大概是2011年11月份左右——我就是计划着做邮件，���此从CPyUG找人；虽然中间有变化，但最终还是落在了这些同学身上，可见真是命运冥冥安排。<br />\n下一次来武汉计划会详细介绍 Milter 和 Antispam 相关的知识，再加上 SMTP、Nginx 吧</p>\n<p>北京计划从邮件周边着手，配合移动端再想想办法启动一组人马</p>\n<p>一手是围绕Email、云存储来深化运营；另一手是云计算平台和大数据的技术积累。就是这样了</p>"
+      },
+      "rss:comments": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1509#comments"
+      },
+      "rss:category": [
+         {
+            "@": {
+               "domain": "http://www.dup2.org/taxonomy/term/53"
+            },
+            "#": "电子邮件"
+         },
+         {
+            "@": {
+               "domain": "http://www.dup2.org/taxonomy/term/2"
+            },
+            "#": "生活"
+         }
+      ],
+      "rss:pubdate": {
+         "@": {},
+         "#": "Thu, 10 Jan 2013 14:03:36 +0000"
+      },
+      "dc:creator": {
+         "@": {},
+         "#": "qyb"
+      },
+      "rss:guid": {
+         "@": {
+            "ispermalink": "false"
+         },
+         "#": "1509 at http://www.dup2.org"
+      },
+      "meta": {
+         "#ns": [
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "@": [
+            {
+               "xml:base": "http://www.dup2.org"
+            },
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "#xml": {
+            "version": "1.0",
+            "encoding": "utf-8"
+         },
+         "#type": "rss",
+         "#version": "2.0",
+         "title": "BT的花 blogs",
+         "description": null,
+         "date": null,
+         "pubdate": null,
+         "pubDate": null,
+         "link": "http://www.dup2.org/blog",
+         "xmlurl": null,
+         "xmlUrl": null,
+         "author": null,
+         "language": "zh-hans",
+         "favicon": null,
+         "copyright": null,
+         "generator": null,
+         "cloud": {},
+         "image": {},
+         "categories": [],
+         "rss:@": {},
+         "rss:title": {
+            "@": {},
+            "#": "BT的花 blogs"
+         },
+         "rss:link": {
+            "@": {},
+            "#": "http://www.dup2.org/blog"
+         },
+         "rss:description": {
+            "@": {}
+         },
+         "rss:language": {
+            "@": {},
+            "#": "zh-hans"
+         }
+      }
+   },
+   {
+      "title": "2012/2013",
+      "description": "<p>关于 2012</p>\n<p>年度阅读：《公正》<br />\n年度运动：跑步<br />\n年度品牌：国航<br />\n年度网站：TechCrunch<br />\n年度App：Endomondo<br />\n年度纨绔：威可多<br />\n年度电影：Battleship —— 虽然片子硬伤很多，但是这种大舰巨炮对轰的场景真过瘾</p>\n<p>回顾去年的若干新年愿望 <a href=\"http://www.dup2.org/node/1459\"> 2011/2012 </a>，汗颜啊，有2点：<br />\n1. 俯卧撑没有能坚持。。。任何事情最重要的是坚持，今年继续列上这个目标吧<br />\n2. 这一年明白了自己工作上很多不足的地方，管200人现在看是一个玩笑，把这个作为一个3-4年的发展目标吧</p>\n<p>2013是本命年，希望平平安安，不让身边人失望</p>",
+      "summary": "<p>关于 2012</p>\n<p>年度阅读：《公正》<br />\n年度运动：跑步<br />\n年度品牌：国航<br />\n年度网站：TechCrunch<br />\n年度App：Endomondo<br />\n年度纨绔：威可多<br />\n年度电影：Battleship —— 虽然片子硬伤很多，但是这种大舰巨炮对轰的场景真过瘾</p>\n<p>回顾去年的若干新年愿望 <a href=\"http://www.dup2.org/node/1459\"> 2011/2012 </a>，汗颜啊，有2点：<br />\n1. 俯卧撑没有能坚持。。。任何事情最重要的是坚持，今年继续列上这个目标吧<br />\n2. 这一年明白了自己工作上很多不足的地方，管200人现在看是一个玩笑，把这个作为一个3-4年的发展目标吧</p>\n<p>2013是本命年，希望平平安安，不让身边人失望</p>",
+      "date": "2013-01-06T01:48:36.000Z",
+      "pubdate": "2013-01-06T01:48:36.000Z",
+      "pubDate": "2013-01-06T01:48:36.000Z",
+      "link": "http://www.dup2.org/node/1508",
+      "guid": "1508 at http://www.dup2.org",
+      "author": "qyb",
+      "comments": "http://www.dup2.org/node/1508#comments",
+      "origlink": null,
+      "image": {},
+      "source": {},
+      "categories": [
+         "生活"
+      ],
+      "enclosures": [],
+      "rss:@": {},
+      "rss:title": {
+         "@": {},
+         "#": "2012/2013"
+      },
+      "rss:link": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1508"
+      },
+      "rss:description": {
+         "@": {},
+         "#": "<p>关于 2012</p>\n<p>年度阅读：《公正》<br />\n年度运动：跑步<br />\n年度品牌：国航<br />\n年度网站：TechCrunch<br />\n年度App：Endomondo<br />\n年度纨绔：威可多<br />\n年度电影：Battleship —— 虽然片子硬伤很多，但是这种大舰巨炮对轰的场景真过瘾</p>\n<p>回顾去年的若干新年愿望 <a href=\"http://www.dup2.org/node/1459\"> 2011/2012 </a>，汗颜啊，有2点：<br />\n1. 俯卧撑没有能坚持。。。任何事情最重要的是坚持，今年继续列上这个目标吧<br />\n2. 这一年明白了自己工作上很多不足的地方，管200人现在看是一个玩笑，把这个作为一个3-4年的发展目标吧</p>\n<p>2013是本命年，希望平平安安，不让身边人失望</p>"
+      },
+      "rss:comments": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1508#comments"
+      },
+      "rss:category": {
+         "@": {
+            "domain": "http://www.dup2.org/taxonomy/term/2"
+         },
+         "#": "生活"
+      },
+      "rss:pubdate": {
+         "@": {},
+         "#": "Sun, 06 Jan 2013 01:48:36 +0000"
+      },
+      "dc:creator": {
+         "@": {},
+         "#": "qyb"
+      },
+      "rss:guid": {
+         "@": {
+            "ispermalink": "false"
+         },
+         "#": "1508 at http://www.dup2.org"
+      },
+      "meta": {
+         "#ns": [
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "@": [
+            {
+               "xml:base": "http://www.dup2.org"
+            },
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "#xml": {
+            "version": "1.0",
+            "encoding": "utf-8"
+         },
+         "#type": "rss",
+         "#version": "2.0",
+         "title": "BT的花 blogs",
+         "description": null,
+         "date": null,
+         "pubdate": null,
+         "pubDate": null,
+         "link": "http://www.dup2.org/blog",
+         "xmlurl": null,
+         "xmlUrl": null,
+         "author": null,
+         "language": "zh-hans",
+         "favicon": null,
+         "copyright": null,
+         "generator": null,
+         "cloud": {},
+         "image": {},
+         "categories": [],
+         "rss:@": {},
+         "rss:title": {
+            "@": {},
+            "#": "BT的花 blogs"
+         },
+         "rss:link": {
+            "@": {},
+            "#": "http://www.dup2.org/blog"
+         },
+         "rss:description": {
+            "@": {}
+         },
+         "rss:language": {
+            "@": {},
+            "#": "zh-hans"
+         }
+      }
+   },
+   {
+      "title": "八股新闻通稿一篇",
+      "description": "<p>搜狐的无数基础服务和业务是基于开源软件构建的，没有开源软件，可以说不仅仅是搜狐，整个互联网行业都会丧失存在的基础。</p>\n<p>从业务的层面，我们依赖于开源社区这个生态环境的繁荣发展；从技术的层面，我们希望工程师在开源社区里同高水平的同行相互学习，磨砺自身的能力；从文化的层面，我们推崇开源社区里以代码为中心，以真实需求为驱动，开放、平等、自由地进行交流合作的氛围。</p>\n<p>为了鼓励工程师和开源社区有更深的合作.....</p>",
+      "summary": "<p>搜狐的无数基础服务和业务是基于开源软件构建的，没有开源软件，可以说不仅仅是搜狐，整个互联网行业都会丧失存在的基础。</p>\n<p>从业务的层面，我们依赖于开源社区这个生态环境的繁荣发展；从技术的层面，我们希望工程师在开源社区里同高水平的同行相互学习，磨砺自身的能力；从文化的层面，我们推崇开源社区里以代码为中心，以真实需求为驱动，开放、平等、自由地进行交流合作的氛围。</p>\n<p>为了鼓励工程师和开源社区有更深的合作.....</p>",
+      "date": "2012-12-29T03:08:33.000Z",
+      "pubdate": "2012-12-29T03:08:33.000Z",
+      "pubDate": "2012-12-29T03:08:33.000Z",
+      "link": "http://www.dup2.org/node/1507",
+      "guid": "1507 at http://www.dup2.org",
+      "author": "qyb",
+      "comments": "http://www.dup2.org/node/1507#comments",
+      "origlink": null,
+      "image": {},
+      "source": {},
+      "categories": [
+         "技术"
+      ],
+      "enclosures": [],
+      "rss:@": {},
+      "rss:title": {
+         "@": {},
+         "#": "八股新闻通稿一篇"
+      },
+      "rss:link": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1507"
+      },
+      "rss:description": {
+         "@": {},
+         "#": "<p>搜狐的无数基础服务和业务是基于开源软件构建的，没有开源软件，可以说不仅仅是搜狐，整个互联网行业都会丧失存在的基础。</p>\n<p>从业务的层面，我们依赖于开源社区这个生态环境的繁荣发展；从技术的层面，我们希望工程师在开源社区里同高水平的同行相互学习，磨砺自身的能力；从文化的层面，我们推崇开源社区里以代码为中心，以真实需求为驱动，开放、平等、自由地进行交流合作的氛围。</p>\n<p>为了鼓励工程师和开源社区有更深的合作.....</p>"
+      },
+      "rss:comments": {
+         "@": {},
+         "#": "http://www.dup2.org/node/1507#comments"
+      },
+      "rss:category": {
+         "@": {
+            "domain": "http://www.dup2.org/taxonomy/term/1"
+         },
+         "#": "技术"
+      },
+      "rss:pubdate": {
+         "@": {},
+         "#": "Sat, 29 Dec 2012 03:08:33 +0000"
+      },
+      "dc:creator": {
+         "@": {},
+         "#": "qyb"
+      },
+      "rss:guid": {
+         "@": {
+            "ispermalink": "false"
+         },
+         "#": "1507 at http://www.dup2.org"
+      },
+      "meta": {
+         "#ns": [
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "@": [
+            {
+               "xml:base": "http://www.dup2.org"
+            },
+            {
+               "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+            }
+         ],
+         "#xml": {
+            "version": "1.0",
+            "encoding": "utf-8"
+         },
+         "#type": "rss",
+         "#version": "2.0",
+         "title": "BT的花 blogs",
+         "description": null,
+         "date": null,
+         "pubdate": null,
+         "pubDate": null,
+         "link": "http://www.dup2.org/blog",
+         "xmlurl": null,
+         "xmlUrl": null,
+         "author": null,
+         "language": "zh-hans",
+         "favicon": null,
+         "copyright": null,
+         "generator": null,
+         "cloud": {},
+         "image": {},
+         "categories": [],
+         "rss:@": {},
+         "rss:title": {
+            "@": {},
+            "#": "BT的花 blogs"
+         },
+         "rss:link": {
+            "@": {},
+            "#": "http://www.dup2.org/blog"
+         },
+         "rss:description": {
+            "@": {}
+         },
+         "rss:language": {
+            "@": {},
+            "#": "zh-hans"
+         }
+      }
+   }
+]

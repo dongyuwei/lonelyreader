@@ -1,0 +1,14 @@
+.add-rss{
+    display: inline-block;
+    font-size: 24px;
+    color: #fff;
+    background: #3cf;
+    font-weight: bold;
+    text-decoration: none;
+}
+.rss{
+    /*background-color: #ff8300;*/
+    background-image: url(/images/rss-64.png);
+    background-repeat: no-repeat;
+}
+

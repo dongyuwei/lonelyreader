@@ -1,0 +1,56 @@
+{
+  "id" : "user/12351670300482372876/source/com.google/post",
+  "title" : "Google 阅读器中通过 董玉伟 指定的“post”",
+  "author" : "董玉伟",
+  "updated" : 1280566050,
+  "direction" : "ltr",
+  "items" : [ {
+    "isReadStateLocked" : true,
+    "crawlTimeMsec" : "1280566050133",
+    "timestampUsec" : "1280566050133900",
+    "id" : "tag:google.com,2005:reader/item/2ad8cfbae6e45eae",
+    "categories" : [ "user/12351670300482372876/source/com.google/link", "user/12351670300482372876/state/com.google/broadcast", "user/12351670300482372876/state/com.google/read" ],
+    "title" : "Welcome - hasLayout.net by Zoffix Znet",
+    "published" : 1280566050,
+    "updated" : 1280566050,
+    "alternate" : [ {
+      "href" : "http://haslayout.net/",
+      "type" : "text/html"
+    } ],
+    "related" : [ {
+      "href" : "http://haslayout.net/",
+      "title" : "haslayout.net"
+    } ],
+    "comments" : [ ],
+    "annotations" : [ ],
+    "origin" : {
+      "streamId" : "user/12351670300482372876/source/com.google/link",
+      "title" : "haslayout.net",
+      "htmlUrl" : "http://haslayout.net/"
+    }
+  }, {
+    "isReadStateLocked" : true,
+    "crawlTimeMsec" : "1279175924917",
+    "timestampUsec" : "1279175924917888",
+    "id" : "tag:google.com,2005:reader/item/2e9ca39d73a2ad96",
+    "categories" : [ "user/12351670300482372876/source/com.google/link", "user/12351670300482372876/state/com.google/broadcast", "user/12351670300482372876/state/com.google/read" ],
+    "title" : "Internet Explorer CSS Bugs - hasLayout.net by Zoffix Znet",
+    "published" : 1279175924,
+    "updated" : 1279175924,
+    "alternate" : [ {
+      "href" : "http://haslayout.net/css/",
+      "type" : "text/html"
+    } ],
+    "related" : [ {
+      "href" : "http://haslayout.net/css/",
+      "title" : "haslayout.net"
+    } ],
+    "comments" : [ ],
+    "annotations" : [ ],
+    "origin" : {
+      "streamId" : "user/12351670300482372876/source/com.google/link",
+      "title" : "haslayout.net",
+      "htmlUrl" : "http://haslayout.net/css/"
+    }
+  } ]
+}

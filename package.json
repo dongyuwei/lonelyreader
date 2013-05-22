@@ -1,0 +1,27 @@
+{
+  "name": "lonelyreader",
+  "description" : "lonely reader",
+  "version": "0.0.1",
+  "author" : {
+    "name" : "dongyuwei",
+    "email" : "newdongyuwei@gmail.com",
+    "url" : "http://session.im"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dongyuwei/lonelyreader.git"
+  },
+  "dependencies": {
+    "express": "3.2.2",
+    "express-resource": "1.0.0" ,
+    "mustache": "0.7.2",
+    "levelup": "0.8.0",
+    "feedparser": "0.15.3",
+    "xml2js": "0.2.7",
+    "request": "2.21.0",
+    "ws": "0.4.25"
+  }
+}
