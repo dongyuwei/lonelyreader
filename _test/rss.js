@@ -4,10 +4,12 @@ var FeedParser = require('feedparser'),
 function getArticle(rssList){
     var data = {};
     rssList.forEach(function(url,i){
-        data[url] = {};
-        var list = [];
+        data[url] = [];
         request(url)
-        .pipe(new FeedParser())
+        .pipe(new FeedParser({
+            // addmeta : false
+            // ,normalize : false
+        }))
         .on('error', function(error) {
             console.error(error)
         })
@@ -15,13 +17,16 @@ function getArticle(rssList){
 
         // })
         .on('article', function(article) {
-            list.push(article);
+
+            data[url].push(article);
         })
         // .on('complete',function(){
 
         // })
         .on('end', function() {
-            console.log(JSON.stringify(list,null,3))
+            if(i === rssList.length -1){
+                console.log(JSON.stringify(data,null,3))
+            }
         });
     });
 }
