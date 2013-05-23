@@ -3,10 +3,11 @@
  */
 
 var express = require('express'),
-    Resource = require('express-resource'),
     http = require('http'),
     path = require('path'),
-    WebSocketServer = require('ws').Server;
+    WebSocketServer = require('ws').Server,
+    Feed = require('./controllers/feed'),
+    Config = require('./config');
 
 var app = express();
 
@@ -15,8 +16,10 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.engine('.html', require('./util/mustache.js'));
 app.set('view engine', 'html');
+// app.use(express.basicAuth(Config.username, Config.passwd));
 app.use(express.favicon());
 app.use(express.logger('dev'));
+app.use(express.compress());
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser('lonelyreader'));
@@ -29,7 +32,7 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
-app.resource(require('./controllers/feed'));
+Feed.init(app);
 
 var server = http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
@@ -39,7 +42,6 @@ var wss = new WebSocketServer({
     server: server
 });
 wss.on('connection', function(ws) {
-    console.log('con..')
     ws.on('close', function() {
 
     });

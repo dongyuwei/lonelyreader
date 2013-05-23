@@ -1,29 +1,16 @@
-exports.index = function(req, res) {
-    res.render('index', {
-        title: 'lonely reader'
-    });
-};
+exports.init = function(app){
+	app.get('/',function(req,res){
+		res.render('index', {
 
-exports.new = function(req, res) {
-    res.send('new feed' + req.query.url);
-};
+    	});
+	});
+	app.post('/',function(req,res){
+		res.send(req.params.url)
+	});
+	app.put('/',function(req,res){
 
-exports.create = function(req, res) {
-    res.send('create feed');
-};
+	});
+	app.delete('/',function(req,res){
 
-exports.show = function(req, res) {
-    res.send('show feed ' + req.params.feed);
-};
-
-exports.edit = function(req, res) {
-    res.send('edit feed ' + req.params.feed);
-};
-
-exports.update = function(req, res) {
-    res.send('update feed ' + req.params.feed);
-};
-
-exports.destroy = function(req, res) {
-    res.send('destroy feed ' + req.params.feed);
+	});
 };
