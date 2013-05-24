@@ -17,7 +17,6 @@ app.set('views', __dirname + '/views');
 app.engine('.html', require('./util/mustache.js'));
 app.set('view engine', 'html');
 app.use(express.basicAuth(Config.username, Config.passwd));
-app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.compress());
 app.use(express.bodyParser());
@@ -42,13 +41,18 @@ var wss = new WebSocketServer({
     server: server
 });
 wss.on('connection', function(ws) {
+    console.log("ws connected----------------\n",ws.upgradeReq.headers['cookie']);
+    app.set('ws',ws);
     ws.on('close', function() {
-
+        console.log('####WebSocket closed!####');
     });
     ws.on('message', function(data, flags) {
-        console.log(data);
-        ws.send(data + JSON.stringify(process.memoryUsage()), function() { 
-            
-        });
+        if(data !== 'KeepAlive'){
+            console.log(data);
+            ws.send(data + JSON.stringify(process.memoryUsage()), function() { 
+                
+            });
+        }
     });
 });
+

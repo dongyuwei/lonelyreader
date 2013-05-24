@@ -10,18 +10,18 @@
         name="viewport">
         <meta content="black" name="apple-mobile-web-app-status-bar-style">
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> 
+
         <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css' />
         <link rel="stylesheet" href="/stylesheets/style.css">
     </head>
     
     <body>
         <form action="/" method="POST">
-            <label for="rss_url">
-                Add New Feed:
-            </label>
             <input type="text" name='url'>
-            <button class='btn btn-primary'>
-                Add
+            <button class='btn btn-primary' type='submit'>
+                Add New Feed
             </button>
         </form>
         <div id="feedTree"></div>

@@ -1,4 +1,4 @@
 module.exports = {
-	'username' : 'dongyuwei',
-	'passwd' : 'lonelyreader'
+	'username' : 'dyw',
+	'passwd' : 'reader'
 };
