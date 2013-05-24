@@ -16,7 +16,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.engine('.html', require('./util/mustache.js'));
 app.set('view engine', 'html');
-// app.use(express.basicAuth(Config.username, Config.passwd));
+app.use(express.basicAuth(Config.username, Config.passwd));
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.compress());
