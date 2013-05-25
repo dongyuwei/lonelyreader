@@ -1,12 +1,46 @@
-exports.init = function(app,ws){
-	app.get('/',function(req,res){
-		console.log(req.remoteUser);
-		res.render('index', {
+var fs = require('fs')
+	,xml2js = require('xml2js');
 
+var feedTree;
+function buildNodeItem(item){
+	if(item.outline){//is category
+        var list = [];
+        item.outline.sort(function(a,b){
+        	return a.$.title.localeCompare(b.$.title);
+        }).forEach(function(node){
+        	list.push(buildNodeItem(node));
+        });
+        return '<li>' + item.$.title + '<ul>' + list.join('') + '</ul></li>'
+    }else{// common rss feed item
+        return '<li data-info="INFO">'.replace("INFO",JSON.stringify(item.$)) + item.$.title + '</li>';
+    }
+}
+function buildTree(result){
+    rootItem = result.opml.body[0];
+    rootItem.$ = {
+    	title : result.opml.head[0].title[0]
+    }
+    return buildNodeItem(rootItem);
+};
+
+function getFeedTree(config,callback){
+	var parser = new xml2js.Parser();
+	fs.readFile(config.opml, function(err, data) {
+	    parser.parseString(data, function (err, result) {
+	    	feedTree = buildTree(result);
+	    	callback && callback.call(feedTree);
+	    });
+	});
+}
+exports.init = function(app,config){
+	getFeedTree(config);
+
+	app.get('/',function(req,res){
+		res.render('index', {
+			feedTree : feedTree
     	});
 	});
 	app.post('/',function(req,res){
-		console.log(app.get('ws'))
 		res.send(req.body.url)
 	});
 	app.put('/',function(req,res){
@@ -14,5 +48,14 @@ exports.init = function(app,ws){
 	});
 	app.delete('/',function(req,res){
 		
+	});
+};
+
+exports.getArticle = function(ws,data){
+	var list = [];
+	ws.send(JSON.stringify(list),function(error){
+		if(error){
+			console.error(error);
+		}
 	});
 };

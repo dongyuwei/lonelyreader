@@ -6,8 +6,8 @@ var express = require('express'),
     http = require('http'),
     path = require('path'),
     WebSocketServer = require('ws').Server,
-    Feed = require('./controllers/feed'),
-    Config = require('./config');
+    feed = require('./controllers/feed'),
+    config = require('./config');
 
 var app = express();
 
@@ -16,7 +16,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.engine('.html', require('./util/mustache.js'));
 app.set('view engine', 'html');
-app.use(express.basicAuth(Config.username, Config.passwd));
+app.use(express.basicAuth(config.username, config.passwd));
 app.use(express.logger('dev'));
 app.use(express.compress());
 app.use(express.bodyParser());
@@ -31,7 +31,7 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
-Feed.init(app);
+feed.init(app,config);
 
 var server = http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
@@ -42,13 +42,18 @@ var wss = new WebSocketServer({
 });
 wss.on('connection', function(ws) {
     console.log("ws connected----------------\n",ws.upgradeReq.headers['cookie']);
-    app.set('ws',ws);
     ws.on('close', function() {
         console.log('####WebSocket closed!####');
     });
     ws.on('message', function(data, flags) {
         if(data !== 'KeepAlive'){
             console.log(data);
+            data = JSON.parse(data);
+            switch (data.action){
+                case "getArticle" : 
+                    feed.getArticle(ws,data);
+                    break;
+            }
             ws.send(data + JSON.stringify(process.memoryUsage()), function() { 
                 
             });
