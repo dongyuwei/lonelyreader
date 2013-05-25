@@ -10,9 +10,9 @@ function buildNodeItem(item){
         }).forEach(function(node){
         	list.push(buildNodeItem(node));
         });
-        return '<li>' + item.$.title + '<ul>' + list.join('') + '</ul></li>'
+        return '<li class="category">' + item.$.title + '<ul>' + list.join('') + '</ul></li>'
     }else{// common rss feed item
-        return '<li data-info="INFO">'.replace("INFO",JSON.stringify(item.$)) + item.$.title + '</li>';
+        return '<li class="item" data-info="INFO">'.replace("INFO",JSON.stringify(item.$)) + item.$.title + '</li>';
     }
 }
 function buildTree(result){
