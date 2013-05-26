@@ -54,9 +54,6 @@ wss.on('connection', function(ws) {
                     feed.getArticle(ws,data);
                     break;
             }
-            ws.send(data + JSON.stringify(process.memoryUsage()), function() { 
-                
-            });
         }
     });
 });

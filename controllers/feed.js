@@ -1,7 +1,10 @@
 var fs = require('fs')
-	,xml2js = require('xml2js');
+	,mustache = require('mustache')
+	,xml2js = require('xml2js')
+	,FeedParser = require('feedparser')
+    ,request = require('request');
 
-var feedTree;
+var feedTree, uuid = 0;
 function buildNodeItem(item){
 	if(item.outline){//is category
         var list = [];
@@ -12,7 +15,14 @@ function buildNodeItem(item){
         });
         return '<li class="category">' + item.$.title + '<ul>' + list.join('') + '</ul></li>'
     }else{// common rss feed item
-        return '<li class="item" data-info="INFO">'.replace("INFO",JSON.stringify(item.$)) + item.$.title + '</li>';
+    	return mustache.render(
+    		'<li class="item"  id="{{id}}" data-info="{{info}}">' + 
+    			'{{title}}<ul id="content_{{id}}"></ul>' + 
+    		'</li>',{
+    		info : JSON.stringify(item.$),
+    		title : item.$.title,
+    		id : uuid++
+    	}); 
     }
 }
 function buildTree(result){
@@ -52,10 +62,22 @@ exports.init = function(app,config){
 };
 
 exports.getArticle = function(ws,data){
-	var list = [];
-	ws.send(JSON.stringify(list),function(error){
-		if(error){
-			console.error(error);
-		}
-	});
+	request(data.url).pipe(new FeedParser({
+		addmeta : false
+	}))
+    .on('error', function(error) {
+        console.error(error)
+    })
+    .on('article', function(article) {
+    	article.id = data.id;
+    	article.xmlUrl = data.url;
+    	ws.send(JSON.stringify(article),function(error){
+    		if(error){
+				console.error(error);
+			}
+    	});
+    })
+    .on('end', function() {
+    	//get all articles from data.url
+    });
 };
