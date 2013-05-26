@@ -6,7 +6,7 @@ function buildNodeItem(item){
 	if(item.outline){//is category
         var list = [];
         item.outline.sort(function(a,b){
-        	return a.$.title.localeCompare(b.$.title);
+        	return a.$.title.toLowerCase().localeCompare(b.$.title.toLowerCase());
         }).forEach(function(node){
         	list.push(buildNodeItem(node));
         });

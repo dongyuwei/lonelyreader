@@ -1,4 +1,13 @@
 (function() {
+    //move uncategorized feed item to `uncategorized` category
+    var list = $('#feedTree > li > ul > .item');
+    $('#feedTree > li > ul').append($('<li class="category">uncategorized<ul id="uncategorized"></ul></li>'));
+    var uncategorized = $('#uncategorized')[0];
+    $.each(list,function(i,item){
+        uncategorized.appendChild(item);
+    });
+    
+
     $('form').on('submit', function(e) {
         e.preventDefault();
         var form = $(this);
