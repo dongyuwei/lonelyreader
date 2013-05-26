@@ -17,7 +17,7 @@ function buildNodeItem(item){
     }else{// common rss feed item
     	return mustache.render(
     		'<li class="item"  id="{{id}}" data-info="{{info}}">' + 
-    			'{{title}}<ul id="content_{{id}}"></ul>' + 
+    			'{{title}} <div data-role="collapsible-set" id="content_{{id}}"></div>' + 
     		'</li>',{
     		info : JSON.stringify(item.$),
     		title : item.$.title,

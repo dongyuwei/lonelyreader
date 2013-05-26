@@ -83,10 +83,23 @@
         onMessage : function(data,ws){
             data = JSON.parse(data);
             console.log(data);
-            $('#content_' + data.id).append('<li data-role="content">' + data.description + '</li>');
+            
+            $('#content_' + data.id).append(this.template(
+                '<div data-role="collapsible"  data-collapsed="true">' + 
+                    '<h3>#{title}</h3>' +
+                    '<div>' +
+                        '<span>#{date}</span> by <em>#{author}</em> | <a target="_blank" href="#{link}">Raw Link</a>' + 
+                        '#{description}' +
+                    '</div>'+ 
+                '</div>', data));
             setTimeout(function(){
-                $('#content_' + data.id).listview('refresh');
+                $('#content_' + data.id).collapsibleset('refresh');
             },20);
+        },
+        template: function (tmpl, data) {
+            return tmpl.replace(/(#\{(.*?)\})/g, function () {
+                return data[arguments[2]] || "";
+            });
         }
     };
     
