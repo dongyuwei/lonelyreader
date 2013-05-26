@@ -1,8 +1,17 @@
 (function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
-        $(this).ajaxSubmit({});
+        var form = $(this);
+        
+        $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize()
+        }).done(function( msg ) {
+            alert(msg + ' added!');
+        });
     });
+
 
     if (window.WebSocket || window.MozWebSocket) {
         var url = "ws://host:3000".replace("host", window.location.hostname);

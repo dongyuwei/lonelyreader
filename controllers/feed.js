@@ -41,7 +41,7 @@ exports.init = function(app,config){
     	});
 	});
 	app.post('/',function(req,res){
-		res.send(req.body.url)
+		res.send(req.body.url);
 	});
 	app.put('/',function(req,res){
 		
