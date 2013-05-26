@@ -72,6 +72,7 @@
                     Task.onMessage(evt.data,ws);
                 };
                 ws.onclose = function() {
+                    Task.ws = null;
                     clearInterval(timer);
                 };
             }
@@ -81,6 +82,7 @@
         },
         onMessage : function(data,ws){
             data = JSON.parse(data);
+            console.log(data);
             $('#content_' + data.id).append('<li data-role="content">' + data.description + '</li>');
             setTimeout(function(){
                 $('#content_' + data.id).listview('refresh');

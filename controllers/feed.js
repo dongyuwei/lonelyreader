@@ -71,6 +71,7 @@ exports.getArticle = function(ws,data){
     .on('article', function(article) {
     	article.id = data.id;
     	article.xmlUrl = data.url;
+        console.log(article);
     	ws.send(JSON.stringify(article),function(error){
     		if(error){
 				console.error(error);
