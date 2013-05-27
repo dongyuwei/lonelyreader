@@ -42,6 +42,7 @@
         getArticle : function(){
             var item, ws = this.connectWebSocket();
             $('#feedTree .item').click(function(){
+                $.mobile.loading('show');
                 item = $(this);
                 ws.send(JSON.stringify({
                     action : 'getArticle',
@@ -94,6 +95,7 @@
                 '</li>', data));
             setTimeout(function(){
                 $('#content_' + data.id).collapsibleset('refresh');
+                $.mobile.loading('hide');
             },20);
         },
         template: function (tmpl, data) {
