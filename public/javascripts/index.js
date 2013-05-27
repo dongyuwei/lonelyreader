@@ -71,7 +71,7 @@
                 ws.onmessage = function(evt) {
                     Task.onMessage(evt.data,ws);
                 };
-                ws.onclose = function() {
+                ws.onerror = ws.onclose = function() {
                     Task.ws = null;
                     clearInterval(timer);
                 };
@@ -85,13 +85,13 @@
             console.log(data);
             
             $('#content_' + data.id).append(this.template(
-                '<div data-role="collapsible"  data-collapsed="true">' + 
+                '<li data-role="collapsible"  data-collapsed="true">' + 
                     '<h3>#{title}</h3>' +
                     '<div>' +
                         '<span>#{date}</span> by <em>#{author}</em> | <a target="_blank" href="#{link}">Raw Link</a>' + 
                         '#{description}' +
                     '</div>'+ 
-                '</div>', data));
+                '</li>', data));
             setTimeout(function(){
                 $('#content_' + data.id).collapsibleset('refresh');
             },20);
