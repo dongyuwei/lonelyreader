@@ -89,7 +89,7 @@
                 '<li data-role="collapsible"  data-collapsed="true">' + 
                     '<h3>#{title}</h3>' +
                     '<div>' +
-                        '<span>#{date}</span> by <em>#{author}</em> | <a target="_blank" href="#{link}">Raw Link</a>' + 
+                        '<span>#{date}</span> by <em>#{author}</em>  <a class="ui-li-aside" target="_blank" href="#{link}">Original Link</a>' + 
                         '#{description}' +
                     '</div>'+ 
                 '</li>', data));
