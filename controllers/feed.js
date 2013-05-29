@@ -16,10 +16,10 @@ function buildNodeItem(item){
         return '<li class="category">' + item.$.title + '<ul>' + list.join('') + '</ul></li>'
     }else{// common rss feed item
     	return mustache.render(
-    		'<li class="item"  id="{{id}}" data-info="{{info}}">' + 
-    			'{{title}} <ul data-role="collapsible-set" id="content_{{id}}"></ul>' + 
+    		'<li class="item"  id="{{{id}}}" data-url="{{{url}}}">' + 
+    			'{{{title}}} <ul data-role="collapsible-set" id="content_{{{id}}}"></ul>' + 
     		'</li>',{
-    		info : JSON.stringify(item.$),
+    		url : encodeURIComponent(item.$.xmlUrl),
     		title : item.$.title,
     		id : uuid++
     	}); 
@@ -66,7 +66,14 @@ exports.getArticle = function(ws,data){
 		addmeta : false
 	}))
     .on('error', function(error) {
-        console.error(error)
+        console.error('error in FeedParser: ',error)
+        ws.send(JSON.stringify({
+            'error' : error.message
+        }),function(error){
+            if(error){
+                console.error(">>> error when sending ws msg: ",error);
+            }
+        });
     })
     .on('article', function(article) {
     	article.id = data.id;
@@ -74,7 +81,7 @@ exports.getArticle = function(ws,data){
         console.log(article);
     	ws.send(JSON.stringify(article),function(error){
     		if(error){
-				console.error(error);
+				console.error(">>> error when sending ws msg <<<: ",error);
 			}
     	});
     })

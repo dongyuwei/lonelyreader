@@ -40,13 +40,19 @@
             return this;
         },
         getArticle : function(){
-            var item, ws = this.connectWebSocket();
+            var item, ws;
+            setTimeout(function(){
+                ws = Task.connectWebSocket();
+            },1000);
             $('#feedTree .item').click(function(){
-                $.mobile.loading('show');
+                setTimeout(function(){//wait for new page render
+                    $.mobile.loading('show');
+                },20);
+                
                 item = $(this);
                 ws.send(JSON.stringify({
                     action : 'getArticle',
-                    url : item.data('info').xmlUrl,
+                    url : decodeURIComponent(item.data('url')),
                     id : item.attr('id')
                 }));
             });
@@ -75,6 +81,7 @@
                 ws.onerror = ws.onclose = function() {
                     Task.ws = null;
                     clearInterval(timer);
+                    alert('WebSocket connection lost! Please refresh page.');
                 };
             }
 
@@ -84,14 +91,19 @@
         onMessage : function(data,ws){
             data = JSON.parse(data);
             console.log(data);
+            if(data.error){
+                $.mobile.loading('hide');
+                return alert(data.error);
+            }
             
             $('#content_' + data.id).append(this.template(
                 '<li data-role="collapsible"  data-collapsed="true">' + 
                     '<h3>#{title}</h3>' +
                     '<div>' +
-                        '<span>#{date}</span> by <em>#{author}</em>  <a class="ui-li-aside" target="_blank" href="#{link}">Original Link</a>' + 
+                        '<span>#{date}</span> by <em>#{author}</em>' +
+                        '<a class="ui-li-aside" target="_blank" href="#{link}">Original Link</a>' + 
                         '#{description}' +
-                    '</div>'+ 
+                    '</div>' + 
                 '</li>', data));
             setTimeout(function(){
                 $('#content_' + data.id).collapsibleset('refresh');
