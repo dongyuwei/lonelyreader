@@ -2,60 +2,89 @@
     var Task = {
         ws : null,
         init : function(){
-            $(document).bind("mobileinit", function(){
-                $.extend($.mobile,{
-                    subPageUrlKey : 'category',
-                    allowCrossDomainPages : true
-                });
-                
-            });
-
-            this.moveToUncategorized().addRssUrl().getArticle();
-        },
-        moveToUncategorized : function(){
-            //move uncategorized feed item to `uncategorized` category
-            var list = $('#feedTree > li > ul > .item');
-            $('#feedTree > li > ul').append($('<li class="category">uncategorized<ul id="uncategorized"></ul></li>'));
-            var uncategorized = $('#uncategorized')[0];
-            $.each(list,function(i,item){
-                uncategorized.appendChild(item);
-            });
-
-            return this;
-        },
-        addRssUrl : function(){
-            $('form').on('submit', function(e) {
-                e.preventDefault();
-                var form = $(this);
-                
-                $.ajax({
-                        type: form.attr('method'),
-                        url: form.attr('action'),
-                        data: form.serialize()
-                }).done(function( msg ) {
-                    alert(msg + ' added!');
-                });
-            });
-
-            return this;
-        },
-        getArticle : function(){
-            var item, ws;
             setTimeout(function(){
-                ws = Task.connectWebSocket();
+                Task.ws = Task.connectWebSocket();
             },1000);
-            $('#feedTree .item').click(function(){
-                setTimeout(function(){//wait for new page render
-                    $.mobile.loading('show');
-                },20);
-                
-                item = $(this);
-                ws.send(JSON.stringify({
-                    action : 'getArticle',
-                    url : decodeURIComponent(item.data('url')),
-                    id : item.attr('id')
-                }));
+
+            this.showCategory().showFeedNode();
+        },
+        showCategory : function(){
+            var box = $('#feedTree');
+            var tree = box.data('tree');
+
+            tree.opml.body[0].outline.sort(function(a,b){
+                return a.$.title.toLowerCase().localeCompare(b.$.title.toLowerCase());
             });
+
+            var uncategorized = [], categoryNode;
+            var oUncategorized = {
+                "$": {
+                    "title": "uncategorized",
+                    "text": "uncategorized"
+                },
+                "outline" : []
+            };
+            $.each(tree.opml.body[0].outline,function(i,item){
+                if(!item.outline){
+                    oUncategorized.outline.push(item);
+                }
+            });
+            tree.opml.body[0].outline.push(oUncategorized);
+
+            $.each(tree.opml.body[0].outline,function(i,item){
+                if(item.outline){//is category
+                    categoryNode = $('<li class="category">' + item.$.title + '<ul></ul></li>');
+                    categoryNode.find('ul').data('meta',item);
+                    box.append(categoryNode);
+                }
+            });
+            return this;
+        },
+        showFeedNode:function(){
+            var uuid = 0;
+            var feedNode,meta,url;
+            $(document).bind("pagebeforechange", function( e, data ) {
+                if ( typeof data.toPage === "string" ) {
+                    var page = $.mobile.path.parseUrl( data.toPage ).pathname;
+                    var $page = $('div[data-url="URL"]'.replace("URL",page)),
+                    $header = $page.children( ":jqmData(role=header)" ),
+                    $content = $page.children( ":jqmData(role=content)" );
+
+                    var categoryBox = $content.find('ul');
+                    meta = categoryBox.data('meta'), url = categoryBox.data('url');
+                    if(meta && meta.outline){
+                        $.each(meta.outline,function(i,item){
+                            feedNode = $($.mustache(
+                                '<li class="item"  id="{{{id}}}">' + 
+                                    '{{{title}}} <ul data-role="collapsible-set" id="content_{{{id}}}"></ul>' + 
+                                '</li>',{
+                                title : item.$.title,
+                                id : uuid++
+                            }));
+                            feedNode.find('ul').data('meta',item).data('url',item.$.xmlUrl);
+
+                            categoryBox.append(feedNode);
+                        });
+                        categoryBox.listview('refresh');
+                    }
+                    if(url){
+                        Task.getArticle(url,categoryBox.attr('id'));
+                    }
+                }
+            });
+            return this;
+        },
+        
+        getArticle : function(url,id){
+            setTimeout(function(){//wait for new page render
+                $.mobile.loading('show');
+            },20);
+            
+            Task.ws.send(JSON.stringify({
+                action : 'getArticle',
+                url : url,
+                id : id
+            }));
 
             return this;
         },
@@ -81,7 +110,7 @@
                 ws.onerror = ws.onclose = function() {
                     Task.ws = null;
                     clearInterval(timer);
-                    alert('WebSocket connection lost! Please refresh page.');
+                    // alert('WebSocket connection lost! Please refresh page.');
                 };
             }
 
@@ -96,7 +125,7 @@
                 return alert(data.error);
             }
             
-            $('#content_' + data.id).append(this.template(
+            $('#' + data.id).append(this.template(
                 '<li data-role="collapsible"  data-collapsed="true">' + 
                     '<h3>#{title}</h3>' +
                     '<div>' +
@@ -106,7 +135,7 @@
                     '</div>' + 
                 '</li>', data));
             setTimeout(function(){
-                $('#content_' + data.id).collapsibleset('refresh');
+                $('#' + data.id).collapsibleset('refresh');
                 $.mobile.loading('hide');
             },20);
         },

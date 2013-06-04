@@ -11,26 +11,26 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" /> 
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-        <!-- <link rel="stylesheet" href="/stylesheets/style.css"/> -->
+        <link rel="stylesheet" href="/stylesheets/jquery.mobile-1.3.1.min.css"/>
     </head>
     
     <body>
         <div data-role='page' >
-            <form action="/" method="POST" data-ajax='false' >
+            <!-- <form action="/" method="POST" data-ajax='false' >
                 <input type="url" data-clear-btn="true" name='url'  placeholder='add RSS URL'>
                 <button data-icon="plus" data-role="button"  type='submit'>
                     Subscribe RSS
                 </button>
-            </form>
+            </form> -->
             
             <div data-role='collapsible-set'>
-                <ul id="feedTree" data-role="listview" data-inset="true" >{{{feedTree}}}</ul>
+                <ul id="feedTree" data-role="listview" data-inset="true" data-tree='{{feedTree}}'></ul>
             </div>
             
         </div>
         
-        <script type="text/javascript" src='/javascripts/jquery.js'></script>
+        <script type="text/javascript" src='/javascripts/jquery.min.js'></script>
+        <script src='/javascripts/mustache.min.js'></script>
         <script src='/javascripts/index.js'></script>
         <script src="/javascripts/jquery.mobile-1.3.1.min.js"></script>
     </body>

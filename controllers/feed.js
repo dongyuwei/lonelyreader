@@ -4,41 +4,12 @@ var fs = require('fs')
 	,FeedParser = require('feedparser')
     ,request = require('request');
 
-var feedTree, uuid = 0;
-function buildNodeItem(item){
-	if(item.outline){//is category
-        var list = [];
-        item.outline.sort(function(a,b){
-        	return a.$.title.toLowerCase().localeCompare(b.$.title.toLowerCase());
-        }).forEach(function(node){
-        	list.push(buildNodeItem(node));
-        });
-        return '<li class="category">' + item.$.title + '<ul>' + list.join('') + '</ul></li>'
-    }else{// common rss feed item
-    	return mustache.render(
-    		'<li class="item"  id="{{{id}}}" data-url="{{{url}}}">' + 
-    			'{{{title}}} <ul data-role="collapsible-set" id="content_{{{id}}}"></ul>' + 
-    		'</li>',{
-    		url : encodeURIComponent(item.$.xmlUrl),
-    		title : item.$.title,
-    		id : uuid++
-    	}); 
-    }
-}
-function buildTree(result){
-    rootItem = result.opml.body[0];
-    rootItem.$ = {
-    	title : result.opml.head[0].title[0]
-    }
-    return buildNodeItem(rootItem);
-};
-
-function getFeedTree(config,callback){
+var feedTree;
+function getFeedTree(config){
 	var parser = new xml2js.Parser();
 	fs.readFile(config.opml, function(err, data) {
 	    parser.parseString(data, function (err, result) {
-	    	feedTree = buildTree(result);
-	    	callback && callback.call(feedTree);
+            feedTree = result;
 	    });
 	});
 }
@@ -47,7 +18,7 @@ exports.init = function(app,config){
 
 	app.get('/',function(req,res){
 		res.render('index', {
-			feedTree : feedTree
+			feedTree : JSON.stringify(feedTree)
     	});
 	});
 	app.post('/',function(req,res){
