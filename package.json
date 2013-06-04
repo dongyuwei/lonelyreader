@@ -15,6 +15,7 @@
     "url": "https://github.com/dongyuwei/lonelyreader.git"
   },
   "dependencies": {
+    "request" : "2.21.0",
     "express": "3.2.2",
     "mustache": "0.7.2",
     "feedparser": "0.15.3",
