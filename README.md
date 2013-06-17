@@ -1,6 +1,6 @@
-lonelyr.eader
+LonelyReader
 ============
- a personal google reader.
+a personal RSS Reader(yes, Google Reader replacement).
 
 1. <img src='https://raw.github.com/dongyuwei/lonelyreader/master/public/images/screenshots/all.png' >
 2. <img src='https://raw.github.com/dongyuwei/lonelyreader/master/public/images/screenshots/ruby.png' >
