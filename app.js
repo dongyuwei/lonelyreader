@@ -8,7 +8,7 @@ var express = require('express'),
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 9000);
+app.set('port', config.port);
 app.set('views', __dirname + '/views');
 app.engine('.html', require('./util/mustache.js'));
 app.set('view engine', 'html');

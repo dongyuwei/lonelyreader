@@ -2,7 +2,8 @@ var fs = require('fs')
 	,mustache = require('mustache')
 	,xml2js = require('xml2js')
 	,FeedParser = require('feedparser')
-    ,request = require('request');
+    ,request = require('request')
+    ,config = require('../config.js');
 
 var feedTree;
 function getFeedTree(config){
@@ -18,7 +19,8 @@ exports.init = function(app,config){
 
 	app.get('/',function(req,res){
 		res.render('index', {
-			feedTree : JSON.stringify(feedTree)
+			feedTree : JSON.stringify(feedTree),
+            port : config.port
     	});
 	});
 	app.post('/',function(req,res){

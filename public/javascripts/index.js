@@ -93,7 +93,10 @@
                 return this.ws;
             }
             if (window.WebSocket || window.MozWebSocket) {
-                var url = "ws://host:9000".replace("host", window.location.hostname);
+                var url = $.mustache("ws://{{{host}}}:{{{port}}}",{
+                    host : window.location.hostname,
+                    port : $('body').data('ws-port')
+                });
                 var ws = window.WebSocket ? new WebSocket(url) : new MozWebSocket(url);
                 var timer;
                 ws.onopen = function() {
