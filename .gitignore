@@ -1,0 +1,10 @@
+node_modules
+db/leveldb_rss_feed
+/_test
+
+*.swp
+*~
+.DS_Store
+
+.secret
+dump.rdb

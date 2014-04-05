@@ -1,7 +1,3 @@
-/**
- * Module dependencies.
- */
-
 var express = require('express'),
     http = require('http'),
     path = require('path'),
@@ -12,7 +8,7 @@ var express = require('express'),
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 9000);
 app.set('views', __dirname + '/views');
 app.engine('.html', require('./util/mustache.js'));
 app.set('view engine', 'html');

@@ -1,8 +1,8 @@
 var path = require('path');
 
 module.exports = {
-	'username' : 'dyw',
-	'passwd' : 'reader',
+	'username' : process.env.READER_USERNAME,
+	'passwd' : process.env.READER_PASSWD,
 
-	'opml' : path.join(__dirname, '_test/google-reader-feed/subscriptions.xml')
+	'opml' : process.env.READER_OPML || path.join(__dirname, '_test/google-reader-feed/subscriptions.xml')
 };

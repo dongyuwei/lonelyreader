@@ -93,7 +93,7 @@
                 return this.ws;
             }
             if (window.WebSocket || window.MozWebSocket) {
-                var url = "ws://host:3000".replace("host", window.location.hostname);
+                var url = "ws://host:9000".replace("host", window.location.hostname);
                 var ws = window.WebSocket ? new WebSocket(url) : new MozWebSocket(url);
                 var timer;
                 ws.onopen = function() {
