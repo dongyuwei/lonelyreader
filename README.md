@@ -23,7 +23,7 @@ Todo:
 
 Screenshots:
 ===========
-1. <img src='https://raw.github.com/dongyuwei/lonelyreader/master/public/images/screenshots/all.png' >
-2. <img src='https://raw.github.com/dongyuwei/lonelyreader/master/public/images/screenshots/ruby.png' >
-3. <img src='https://raw.github.com/dongyuwei/lonelyreader/master/public/images/screenshots/list.png' >
-4. <img src='https://raw.github.com/dongyuwei/lonelyreader/master/public/images/screenshots/item.png' >
+1. <img src='https://raw.github.com/dongyuwei/lonelyreader/master/public/images/screenshots/all.png' > <br><br>
+2. <img src='https://raw.github.com/dongyuwei/lonelyreader/master/public/images/screenshots/ruby.png' > <br><br>
+3. <img src='https://raw.github.com/dongyuwei/lonelyreader/master/public/images/screenshots/list.png' > <br><br>
+4. <img src='https://raw.github.com/dongyuwei/lonelyreader/master/public/images/screenshots/item.png' > <br><br>
